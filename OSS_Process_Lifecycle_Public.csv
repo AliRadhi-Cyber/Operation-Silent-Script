@@ -1,0 +1,32 @@
+Level,Date and Time,Source,Event ID,Task Category,Message
+Information,11/26/2026 10:44:01 AM,Microsoft-Windows-Sysmon,1,Process Create (rule: ProcessCreate),"Process Create:
+RuleName: -
+UtcTime: 2026-11-26 18:44:01.184
+ProcessGuid: {1045d10a-7df1-6b08-4c01-000000001400}
+ProcessId: 2848
+Image: C:\Windows\System32\conhost.exe
+FileVersion: 10.0.26100.9818 (WinBuild.160101.0800)
+Description: Console Window Host
+Product: Microsoft® Windows® Operating System
+Company: Microsoft Corporation
+OriginalFileName: CONHOST.EXE
+CommandLine: \??\C:\WINDOWS\system32\conhost.exe 0xffffffff -ForceV1
+CurrentDirectory: C:\WINDOWS
+User: LAB-HOST\LabUser
+LogonGuid: {1045d10a-78c3-6b08-1a6e-050000000000}
+LogonId: 0x56E1A
+TerminalSessionId: 1
+IntegrityLevel: High
+Hashes: SHA256=DD5C3514132D92052004D302C66C756FFB6BEEF572DE6538B4FC55F62579EB11
+ParentProcessGuid: {1045d10a-7df1-6b08-4b01-000000001400}
+ParentProcessId: 5220
+ParentImage: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ParentCommandLine: ""C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"" 
+ParentUser: LAB-HOST\LabUser"
+Information,11/26/2026 11:08:53 AM,Microsoft-Windows-Sysmon,5,Process terminated (rule: ProcessTerminate),"Process terminated:
+RuleName: -
+UtcTime: 2026-11-26 19:08:53.901
+ProcessGuid: {1045d10a-7df1-6b08-4c01-000000001400}
+ProcessId: 2848
+Image: C:\Windows\System32\conhost.exe
+User: LAB-HOST\LabUser"

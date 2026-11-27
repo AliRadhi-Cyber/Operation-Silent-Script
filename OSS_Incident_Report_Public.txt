@@ -1,0 +1,71 @@
+# OPERATION SILENT SCRIPT
+## SOC Incident Investigation Report
+
+**Incident ID:** OSS-001  
+**Investigation Date:** November 26–27, 2026  
+**Environment:** Windows 11 / Oracle VirtualBox  
+**Classification:** Controlled Laboratory Investigation  
+**Severity:** Informational — Reviewed Activity
+
+### 1. Executive Summary
+
+Operation Silent Script is a cybersecurity laboratory project focused on Windows endpoint monitoring, process execution analysis, and digital forensic evidence preservation.
+
+A total of 3,650 Sysmon events were aggregated by event ID using Windows PowerShell; selected records were examined in detail.
+
+### 2. Tools and Technologies
+
+- Microsoft Sysmon
+- Windows PowerShell
+- Windows Event Viewer
+- Oracle VirtualBox
+- SHA256 hashing
+- EVTX and CSV evidence formats
+
+### 3. Security Event Analysis
+
+- Event ID 1: Process Creation — 2,112 events
+- Event ID 5: Process Termination — 1,529 events
+- Event ID 4: Sysmon Service State Change — 8 events
+- Event ID 16: Sysmon Configuration Change — 1 event
+
+### 4. Process Lifecycle Investigation
+
+Parent Process: powershell.exe  
+Parent PID: 5220  
+Child Process: conhost.exe  
+Child PID: 2848  
+Integrity Level: High
+
+Lifecycle date: November 26, 2026 (UTC)
+
+Creation Time: 18:44:01.184 UTC  
+Termination Time: 19:08:53.901 UTC  
+Process Duration: 24 minutes, 52.717 seconds
+
+Matching Process GUIDs confirmed that both events belonged to the same process instance.
+
+### 5. Evidence Integrity
+
+Three original evidence files were preserved and copied into a dedicated investigation directory.
+
+SHA256 hashes were generated and compared against the original files. All three hashes matched.
+
+### 6. Findings and Conclusion
+
+The examined process activity was consistent with normal elevated PowerShell usage. No malicious activity was confirmed in the reviewed records.
+
+The investigation demonstrated endpoint monitoring, event correlation, process lifecycle reconstruction, forensic evidence preservation, and security incident documentation.
+
+### 7. Recommendations
+
+- Continue monitoring PowerShell execution.
+- Review unusual parent-child process relationships.
+- Monitor Sysmon configuration changes.
+- Integrate endpoint telemetry into a SIEM for centralized analysis.
+
+### 8. Investigation Limitations
+
+This investigation was conducted in a controlled virtual environment. Detailed process analysis covered selected events, not every recorded event. No system-wide security assurance is implied.
+
+Public evidence consists of aggregate event counts and two selected, anonymized lifecycle records. Original evidence and hashes are retained privately.
